@@ -1,6 +1,6 @@
 # Introduction
 
-<div style='text-align: justify;'>
+<div align="justify">
 
 It’s all too common for developers to start coding an application without a formal architecture in place. Without a clear and well-defined architecture, most developers and architects will resort to the de facto standard traditional layered architecture pattern (also called the n-tier architecture), creating implicit layers by separating source-code modules into packages. Unfortunately, what often results from this practice is a collection of unorganized source-code modules that lack clear roles, responsibilities, and relationships to one another. This is commonly referred to as the big ball of mud architecture anti-pattern.
 

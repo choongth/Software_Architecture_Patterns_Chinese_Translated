@@ -1,6 +1,6 @@
 # CHAPTER 1 &emsp; Microservices Architecture Pattern
 
-<div style='text-align: justify;'>
+<div align="justify">
 
 ## Pattern Description
 

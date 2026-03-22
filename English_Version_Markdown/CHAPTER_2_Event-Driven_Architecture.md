@@ -1,6 +1,6 @@
 # CHAPTER 2 &emsp; Event-Driven Architecture
 
-<div style='text-align: justify;'>
+<div align="justify">
 
 
 ## Mediator Topology

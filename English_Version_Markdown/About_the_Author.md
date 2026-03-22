@@ -1,6 +1,6 @@
 # About the Author
 
-<div style='text-align: justify;'>
+<div align="justify">
 
 **Mark Richards** is an experienced, hands-on software architect involved in the architecture, design, and implementation of microservices architectures, service-oriented architectures, and distributed systems in J2EE and other technologies. He has been in the software industry since 1983 and has significant experience and expertise in application, integration, and enterprise architecture. Mark served as the president of the New England Java Users Group from 1999 through 2003. He is the author of numerous technical books and videos, including *Software Architecture Fundamentals* (O’Reilly video), *Enterprise Messaging* (O’Reilly video), *Java Message Service, 2nd Edition* (O’Reilly), and a contributing author to *97 Things Every Software Architect Should Know* (O’Reilly). Mark has a master’s degree in computer science and numerous architect and developer certifications from IBM, Sun, The Open Group, and BEA. He is a regular conference speaker at the No Fluff Just Stuff (NFJS) Symposium Series and has spoken at more than 100 conferences and user groups around the world on a variety of enterprise-related technical topics. When he is not working, Mark can usually be found hiking in the White Mountains or along the Appalachian Trail.
 

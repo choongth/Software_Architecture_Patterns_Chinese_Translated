@@ -1,6 +1,6 @@
 # CHAPTER 3 &emsp; Microkernel Architecture
 
-<div style='text-align: justify;'>
+<div align="justify">
 
 ## Pattern Description
 

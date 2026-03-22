@@ -1,6 +1,6 @@
 # CHAPTER 1 &emsp; Space-Based Architecture
 
-<div style='text-align: justify;'>
+<div align="justify">
 
 ## Pattern Description
 
