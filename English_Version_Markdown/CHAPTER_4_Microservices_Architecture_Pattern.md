@@ -101,8 +101,7 @@ Analysis: The deployment characteristics of the microservices pattern rate very 
 
 ***Testability***
 > Rating: High  
-Analysis: Due to the separation and isolation of business functionality
-into independent applications, testing can be scoped, allowing for more targeted testing efforts. Regression testing for a particular service component is much easier and more feasible than regression testing for an entire monolithic application. Also, since the service components in this pattern are loosely coupled, there is much less of a chance from a development perspective of making a change that breaks another part of the application, easing the testing burden of having to test the entire application for one small change.
+Analysis: Due to the separation and isolation of business functionality into independent applications, testing can be scoped, allowing for more targeted testing efforts. Regression testing for a particular service component is much easier and more feasible than regression testing for an entire monolithic application. Also, since the service components in this pattern are loosely coupled, there is much less of a chance from a development perspective of making a change that breaks another part of the application, easing the testing burden of having to test the entire application for one small change.
 
 ***Performance***
 > Rating: Low  
@@ -114,7 +113,6 @@ Analysis: Because the application is split into separately deployed units, each 
 
 ***Ease of development***
 > Rating: High  
-Analysis: Because functionality is isolated into separate and distinct
-service components, development becomes easier due to the smaller and isolated scope. There is much less chance a developer will make a change in one service component that would affect other service components, thereby reducing the coordination needed among developers or development teams.
+Analysis: Because functionality is isolated into separate and distinct service components, development becomes easier due to the smaller and isolated scope. There is much less chance a developer will make a change in one service component that would affect other service components, thereby reducing the coordination needed among developers or development teams.
 
 </div>
