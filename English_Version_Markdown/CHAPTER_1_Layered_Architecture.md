@@ -11,7 +11,7 @@ Components within the layered architecture pattern are organized into horizontal
 
 Each layer of the layered architecture pattern has a specific role and responsibility within the application. For example, a presentation layer would be responsible for handling all user interface and browser communication logic, whereas a business layer would be responsible for executing specific business rules associated with the request. Each layer in the architecture forms an abstraction around the work that needs to be done to satisfy a particular business request. For example, the presentation layer doesn’t need to know or worry about how to get customer data; it only needs to display that information on a screen in particular format. Similarly, the business layer doesn’t need to be concerned about how to format customer data for display on a screen or even where the customer data is coming from; it only needs to get the data from the persistence layer, perform business logic against the data (e.g., calculate values or aggregate data), and pass that information up to the presentation layer.
 
-<div style='text-align: left;'>
+<div style='text-align: center;'>
 
 ![Local Image](../images/chapter_1/image1.png)
 
@@ -26,7 +26,7 @@ One of the powerful features of the layered architecture pattern is the separati
 
 Notice in Figure 1-2 that each of the layers in the architecture is marked as being closed. This is a very important concept in the layered architecture pattern. A closed layer means that as a request moves from layer to layer, it must go through the layer right below it to get to the next layer below that one. For example, a request originating from the presentation layer must first go through the business layer and then to the persistence layer before finally hitting the database layer.
 
-<div style='text-align: left;'>
+<div style='text-align: center;'>
 
 ![Local Image](../images/chapter_1/image2.png)
 
@@ -47,7 +47,7 @@ In this example, the new services layer would likely reside below the business l
 
 As illustrated in Figure 1-3, the services layer in this case is marked as open, meaning requests are allowed to bypass this open layer and go directly to the layer below it. In the following example, since the services layer is open, the business layer is now allowed to bypass it and go directly to the persistence layer, which makes perfect sense.
 
-<div style='text-align: left;'>
+<div style='text-align: center;'>
 
 ![Local Image](../images/chapter_1/image3.png)
 
@@ -64,7 +64,7 @@ To illustrate how the layered architecture works, consider a request from a busi
 
 The customer screen is responsible for accepting the request and displaying the customer information. It does not know where the data is, how it is retrieved, or how many database tables must be queries to get the data. Once the customer screen receives a request to get customer information for a particular individual, it then forwards that request onto the customer delegate module. This module is responsible for knowing which modules in the business layer can process that request and also how to get to that module and what data it needs (the contract). The customer object in the business layer is responsible for aggregating all of the information needed by the business request (in this case to get customer information). This module calls out to the customer dao (data access object) module in the persistence layer to get customer data, and also the order dao module to get order information. These modules in turn execute SQL statements to retrieve the corresponding data and pass it back up to the customer object in the business layer. Once the customer object receives the data, it aggregates the data and passes that information back up to the customer delegate, which then passes that data to the customer screen to be presented to the user.
 
-<div style='text-align: left;'>
+<div style='text-align: center;'>
 
 ![Local Image](../images/chapter_1/image4.png)
 

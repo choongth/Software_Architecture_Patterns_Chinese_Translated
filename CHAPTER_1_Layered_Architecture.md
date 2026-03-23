@@ -6,7 +6,7 @@
 
 
 
-<div style='text-align: left;'>
+<div style='text-align: center;'>
 
 ![Local Image](./images/chapter_1/image1.png)
 
@@ -22,7 +22,7 @@
 
 
 
-<div style='text-align: left;'>
+<div style='text-align: center;'>
 
 ![Local Image](./images/chapter_1/image2.png)
 
@@ -34,7 +34,7 @@
 
 
 
-<div style='text-align: left;'>
+<div style='text-align: center;'>
 
 ![Local Image](./images/chapter_1/image3.png)
 
@@ -51,7 +51,7 @@
 
 
 
-<div style='text-align: left;'>
+<div style='text-align: center;'>
 
 ![Local Image](./images/chapter_1/image4.png)
 
