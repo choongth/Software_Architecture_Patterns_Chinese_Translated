@@ -1,4 +1,4 @@
-# 附录A 模式分析概要
+# 附录A 模式分析总结
 
 <div align="justify">
 
@@ -8,7 +8,7 @@
 
 ![Local Image](./images/appendix_a/image1.png)
 
-*Figure A-1. Pattern-analysis summary*
+*图 A-1. 模式分析总结*
 
 </div>
 
