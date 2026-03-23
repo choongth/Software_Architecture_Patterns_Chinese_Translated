@@ -19,7 +19,7 @@ There are two primary components within this architecture pattern: a *processing
 
 The processing-unit component contains the application components (or portions of the application components). This includes web-based components as well as backend business logic. The contents of the processing unit varies based on the type of application— smaller web-based applications would likely be deployed into a single processing unit, whereas larger applications may split the application functionality into multiple processing units based on the functional areas of the application. The processing unit typically contains the application modules, along with an in-memory data grid and an optional asynchronous persistent store for failover. It also contains a replication engine that is used by the virtualized middleware to replicate data changes made by one processing unit to other active processing units.
 
-<div style='text-align: center;'>
+<div align="center">
 
 ![Local Image](../images/chapter_5/image1.png)
 
@@ -36,7 +36,7 @@ The magic of the space-based architecture pattern lies in the virtualized middle
 
 The virtualized middleware is essentially the controller for the architecture and manages requests, sessions, data replication, distributed request processing, and process-unit deployment. There are four main architecture components in the virtualized middleware: the messaging grid, the data grid, the processing grid, and the deployment manager.
 
-<div style='text-align: center;'>
+<div align="center">
 
 ![Local Image](../images/chapter_5/image2.png)
 
@@ -49,7 +49,7 @@ The virtualized middleware is essentially the controller for the architecture an
 
 The messaging grid, shown in Figure 5-3, manages input request and session information. When a request comes into the virtualized-middleware component, the messaging-grid component determines which active processing components are available to receive the request and forwards the request to one of those processing units. The complexity of the messaging grid can range from a simple round-robin algorithm to a more complex next-available algorithm that keeps track of which request is being processed by which processing unit.
 
-<div style='text-align: center;'>
+<div align="center">
 
 ![Local Image](../images/chapter_5/image3.png)
 
@@ -62,7 +62,7 @@ The messaging grid, shown in Figure 5-3, manages input request and session infor
 
 The data-grid component is perhaps the most important and crucial component in this pattern. The data grid interacts with the data-replication engine in each processing unit to manage the data replication between processing units when data updates occur. Since the messaging grid can forward a request to any of the processing units available, it is essential that each processing unit contains exactly the same data in its in-memory data grid. Although Figure 5-4 shows a synchronous data replication between processing units, in reality this is done in parallel asynchronously and *very quickly*, sometimes completing the data synchronization in a matter of microseconds (one millionth of a second).
 
-<div style='text-align: center;'>
+<div align="center">
 
 ![Local Image](../images/chapter_5/image4.png)
 
@@ -75,7 +75,7 @@ The data-grid component is perhaps the most important and crucial component in t
 
 The processing grid, illustrated in Figure 5-5, is an optional component within the virtualized middleware that manages distributed request processing when there are multiple processing units, each handling a portion of the application. If a request comes in that requires coordination between processing unit types (e.g., an order processing unit and a customer processing unit), it is the processing grid that mediates and orchestrates the request between those two processing units.
 
-<div style='text-align: center;'>
+<div align="center">
 
 ![Local Image](../images/chapter_5/image5.png)
 

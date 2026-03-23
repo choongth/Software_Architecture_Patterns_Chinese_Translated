@@ -11,7 +11,7 @@ Regardless of the topology or implementation style you chose, there are several 
 
 Perhaps the most important concept to understand with this pattern is the notion of a *service component*. Rather than think about services within a microservices architecture, it is better to think about service components, which can vary in granularity from a single module to a large portion of the application. Service components contain one or more modules (e.g., Java classes) that represent either a single-purpose function (e.g., providing the weather for a specific city or town) or an independent portion of a large business application (e.g., stock trade placement or determining auto-insurance rates). Designing the right level of service component granularity is one of the biggest challenges within a microservices architecture. This challenge is discussed in more detail in the following service-component orchestration subsection.
 
-<div style='text-align: center;'>
+<div align="center">
 
 ![Local Image](../images/chapter_4/image1.png)
 
@@ -34,7 +34,7 @@ While there are literally dozens of ways to implement a microservices architectu
 
 The *API REST-based* topology is useful for websites that expose small, self-contained individual services through some sort of API (application programming interface). This topology, which is illustrated in Figure 4-2, consists of very fine-grained service components (hence the name *microservices*) that contain one or two modules that perform specific business functions independent from the rest of the services. In this topology, these fine-grained service components are typically accessed using a REST-based interface implemented through a separately deployed web-based API layer. Examples of this topology include some of the common single-purpose cloud-based RESTful web services found by Yahoo, Google, and Amazon.
 
-<div style='text-align: center;'>
+<div align="center">
 
 ![Local Image](../images/chapter_4/image2.png)
 
@@ -44,7 +44,7 @@ The *API REST-based* topology is useful for websites that expose small, self-con
 
 The application REST-based topology differs from the API RESTbased approach in that client requests are received through traditional web-based or fat-client business application screens rather than through a simple API layer. As illustrated in Figure 4-3, the user-interface layer of the application is deployed as a separate web application that remotely accesses separately deployed service components (business functionality) through simple REST-based interfaces. The service components in this topology differ from those in the API-REST-based topology in that these service components tend to be larger, more coarse-grained, and represent a small portion of the overall business application rather than fine-grained, singleaction services. This topology is common for small to medium-sized business applications that have a relatively low degree of complexity.
 
-<div style='text-align: center;'>
+<div align="center">
 
 ![Local Image](../images/chapter_4/image3.png)
 
@@ -56,7 +56,7 @@ Another common approach within the microservices architecture pattern is the cen
 
 The centralized messaging topology is typically found in larger business applications or applications requiring more sophisticated control over the transport layer between the user interface and the service components. The benefits of this topology over the simple REST-based topology discussed previously are advanced queuing mechanisms, asynchronous messaging, monitoring, error handling, and better overall load balancing and scalability. The single point of failure and architectural bottleneck issues usually associated with a centralized broker are addressed through broker clustering and broker federation (splitting a single broker instance into multiple broker instances to divide the message throughput load based on functional areas of the system).
 
-<div style='text-align: center;'>
+<div align="center">
 
 ![Local Image](../images/chapter_4/image4.png)
 

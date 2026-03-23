@@ -13,7 +13,7 @@ The mediator topology is useful for events that have multiple steps and require 
 
 There are four main types of architecture components within the mediator topology: event queues, an event mediator, event channels, and event processors. The event flow starts with a client sending an event to an *event queue*, which is used to transport the event to the event mediator. The *event mediator* receives the initial event and orchestrates that event by sending additional asynchronous events to *event channels* to execute each step of the process. *Event processors*, which listen on the event channels, receive the event from the event mediator and execute specific business logic to process the event. Figure 2-1 illustrates the general mediator topology of the event-driven architecture pattern.
 
-<div style='text-align: center;'>
+<div align="center">
 
 ![Local Image](../images/chapter_2/image1.png)
 
@@ -39,7 +39,7 @@ Understanding your needs and matching them to the correct event mediator impleme
 
 To illustrate how the mediator topology works, suppose you are insured through an insurance company and you decide to move. In this case, the initial event might be called something like *relocation event*. The steps involved in processing a *relocation event* are contained within the event mediator as shown in Figure 2-2. For each initial event step, the event mediator creates a processing event (e.g., *change address*, *recalc quote*, etc.), sends that processing event to the event channel and waits for the processing event to be processed by the corresponding event processor (e.g., customer process, quote process, etc.). This process continues until all of the steps in the initial event have been processed. The single bar over the recalc quote and update claims steps in the event mediator indicates that these steps can be run at the same time.
 
-<div style='text-align: center;'>
+<div align="center">
 
 ![Local Image](../images/chapter_2/image2.png)
 
@@ -58,7 +58,7 @@ The event channels contained within the broker component can be message queues, 
 
 This topology is illustrated in Figure 2-3. As you can see from the diagram, there is no central event-mediator component controlling and orchestrating the initial event; rather, each event-processor component is responsible for processing an event and publishing a new event indicating the action it just performed. For example, an event processor that balances a portfolio of stocks may receive an initial event called *stock split*. Based on that initial event, the event processor may do some portfolio rebalancing, and then publish a new event to the broker called *rebalance portfolio*, which would then be picked up by a different event processor. Note that there may be times when an event is published by an event processor but not picked up by any another event processor. This is common when you are evolving an application or providing for future functionality and extensions.
 
-<div style='text-align: center;'>
+<div align="center">
 
 ![Local Image](../images/chapter_2/image3.png)
 
@@ -68,7 +68,7 @@ This topology is illustrated in Figure 2-3. As you can see from the diagram, the
 
 To illustrate how the broker topology works, we’ll use the same example as in the mediator topology (an insured person moves). Since there is no central event mediator to receive the initial event in the broker topology, the customer-process component receives the event directly, changes the customer address, and sends out an event saying it changed a customer’s address (e.g., *change address* event). In this example, there are two event processors that are interested in the *change address* event: the quote process and the claims process. The quote processor component recalculates the new autoinsurance rates based on the address change and publishes an event to the rest of the system indicating what it did (e.g., *recalc quote* event). The claims processing component, on the other hand, receives the same *change address* event, but in this case, it updates an outstanding insurance claim and publishes an event to the system as an *update claim* event. These new events are then picked up by other event processor components, and the event chain continues through the system until there are no more events are published for that particular initiating event.
 
-<div style='text-align: center;'>
+<div align="center">
 
 ![Local Image](../images/chapter_2/image4.png)
 

@@ -11,7 +11,7 @@ The microkernel architecture pattern consists of two types of architecture compo
 
 The core system of the microkernel architecture pattern traditionally contains only the minimal functionality required to make the system operational. Many operating systems implement the microkernel architecture pattern, hence the origin of this pattern’s name. From a business-application perspective, the core system is often defined as the general business logic sans custom code for special cases, special rules, or complex conditional processing.
 
-<div style='text-align: center;'>
+<div align="center">
 
 ![Local Image](../images/chapter_3/image1.png)
 
@@ -40,7 +40,7 @@ Not surprisingly, most insurance claims applications leverage large and complex 
 
 The stack of folders you see in Figure 3-2 represents the core system for claims processing. It contains the basic business logic required by the insurance company to process a claim, except without any custom processing. Each plug-in module contains the specific rules for that state. In this example, the plug-in modules can be implemented using custom source code or separate rules engine instances. Regardless of the implementation, the key point is that state-specific rules and processing is separate from the core claims system and can be added, removed, and changed with little or no effect on the rest of the core system or other plug-in modules.
 
-<div style='text-align: center;'>
+<div align="center">
 
 ![Local Image](../images/chapter_3/image2.png)
 
