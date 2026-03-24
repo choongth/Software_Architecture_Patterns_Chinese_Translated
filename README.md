@@ -60,6 +60,6 @@
 |------|------|
 | 原书名 | *Software Architecture Patterns* |
 | 出版社 | O'Reilly Media |
-| 作者 | Mark Richards |
+| 作者 | [Mark Richards](作者简介.md) |
 | 原版语言 | 英文 |
 | 原版文件 | [`Software Architecture Patterns.pdf`](Software%20Architecture%20Patterns.pdf) |
