@@ -52,6 +52,8 @@
 
 如需对照阅读，英文原版 Markdown 文件存放于 [`English_Version_Markdown/`](English_Version_Markdown/) 目录。
 
+**如发现翻译错漏，欢迎提交 Issue 或 Pull Request。**
+
 ---
 
 ## 原著信息
